@@ -28,9 +28,9 @@ public class AirplaneController {
         airplaneService.newAirplane(airplane);
     }
 
-    @RequestMapping(value = "findairplane", method = RequestMethod.GET)
-    public Airplane findairplane(@RequestBody long id){
-        return airplaneService.findPlane(id);
+    @RequestMapping(value = "findairplane/{airplaneid}", method = RequestMethod.GET)
+    public Airplane findairplane(@PathVariable long airplaneid){
+        return airplaneService.findPlane(airplaneid);
     }
 
 //    @RequestMapping(value = "deleteairplane", method = RequestMethod.DELETE)

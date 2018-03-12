@@ -1,18 +1,21 @@
-$("#airplaneselect").change(function(){
+function getAirplane(){
+        var airplaneid = $("#airplaneselect").children(":selected").attr("id");
 
-    function getAirplane(){
+        console.log(airplaneid);
         $.ajax({
-            url: apiairplane+"findairplane",
+            url: apiairplane+"findairplane/"+airplaneid,
             type: "get",
+            contentType: "application/json",
             success: function(data){
-                var airport = data.airport;
-                $("#location").val(airport.city);
+                console.log(data);
+                $("#location").text(data.airport.city);
+                $("#fuel").text(data.fuel);
 
 
             }
         })
     }
 
-
-
-})
+    $("#airplaneselect").change(function(){
+        getAirplane();
+    })

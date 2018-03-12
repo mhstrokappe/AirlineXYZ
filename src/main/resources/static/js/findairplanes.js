@@ -6,8 +6,9 @@ function getAirplanes(){
             $('#airplaneselect').html("");
 
             $.each(data, function(index,current){
-                $('#airplaneselect').append($('<option></option>').attr("id",index).text(current.name));
+                $('#airplaneselect').append($('<option></option>').attr("id",current.id).text(current.name));
             })
+            getAirplane();
         }
     })
 }
