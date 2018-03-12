@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>XYZ Airlines</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="jumbotron.css" rel="stylesheet"> -->
+</head>
+
+<body>
+
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-2">Welcome to XYZ Airlines!</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class = "col-md-6">
+                Choose airline: <br>
+                <select id="airlineselect">
+
+                </select>
+            </div>
+            <div class = "col-md-6">
+                Choose airplane: <br>
+                <select id="airplaneselect">
+
+                </select>
+                <button type='button' class='btn btn-success' data-toggle='modal' data-target='#addAirplaneModal' onclick='getAirports()'>Add new airplane</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class = "col-md-6">
+                <p>Current location: <br> <div id="location"></div></p>
+                <p>Current fuel level: <br> <div id="fuel"></div> ton of fuel</p>
+                <button type="button" onclick="alert('Hello world!')">Fuel airplane</button>
+            </div>
+            <div class = "col-md-6">
+                Choose destination:
+            </div>
+        </div>
+    </div> <!-- /container -->
+
+    <div class="modal fade" id="addAirplaneModal" tabindex="-1" role="dialog" aria-labelledby="addAirplaneModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalHeader">Add airplane:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="name">Name airplane:</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="type">Type airplane:</label>
+                            <input type="text" class="form-control" id="type">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="startairport">Airport:</label>
+                            <select type="text" class="form-control" id="startairport"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="buttonsupdatemodal">
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                    <button type='button' class='btn btn-success' data-dismiss='modal' onclick='addAirplane()'>Add Airplane</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/findairlines.js"></script>
+<script src="js/addairplane.js"></script>
+<script src="js/findairplanes.js"></script>
+<script src="js/findairports.js"></script>
+<script src="js/selectairplane.js"></script>
+
+</body>
+</html>
